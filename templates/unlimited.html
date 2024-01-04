@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="container">
+
+        <div class="section">
+            <h2>Score: {{ points }}</h2>
+            {% with messages = get_flashed_messages()%}
+                {% if messages %}
+                    {% for message in messages %}
+                        <h3 >{{ message }}</h3>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <!--style="font-size: 0.7em"-->
+
+        <div class="section">
+
+            <img src="{{ album }}" alt="Image not found">
+
+        </div>
+
+        <div class="section horizontal-container">
+            <form action="/unlimited" method="post">
+                <input class="form-control mx-auto w-auto" id="albumName" name="albumName" placeholder="Album Name" type="text" autofocus>
+                <input class="form-control mx-auto w-auto" id="artistName" name="artistName" placeholder="Artist Name" type="text">
+                <input class="form-control mx-auto w-auto" id="albumReleaseDate" name="albumReleaseDate" placeholder="*BONUS* Release year" type="number">
+
+                <button class="btn btn-primary" type="submit">Input</button>
+            </form>
+            <form action="/unlimited" method="post">
+                <button class="btn btn-primary" type="submit">Skip</button>
+            </form>
+            <form action="/" method="get">
+                <button class="btn btn-primary" type="submit">Back to Menu</button>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

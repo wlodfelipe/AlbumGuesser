@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="container">
+    <div class="section">
+        <h2>Your Score: {{ score }} !</h2>
+        <img src="/static/giphy.gif" alt="Pingu listening to some music">
+        <h3>Share with your friends!</h3>
+    </div>
+    <form action="/" method="get">
+        <button class="btn btn-primary" type="submit">Go again 🎵</button>
+    </form>
+</div>
+
+<footer class="footer">
+    <div>
+        <div class="left-content">
+            <a href="https://www.last.fm/" target="blank">Powered by AudioScrobbler</a>
+            <p>Last.fm Ltd. All rights reserved</p>
+        </div>
+            <div class="right-content">
+                <a href="https://github.com/FuraBuxoZeca" target="_blank">
+                    <h6 style="margin-bottom: 10px; margin-top: 5px;">My Github</h6>
+                </a>
+                <a href="https://www.linkedin.com/in/felipe-luiz-wlodkowski-953255273/" target="_blank">
+                    <h6 style="margin-bottom: 10px; margin-top: 5px;">My LinkedIn</h6>
+                </a>
+        </div>
+    </div>
+  </footer>
+{% endblock %}

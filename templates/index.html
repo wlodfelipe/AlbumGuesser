@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<div class="container">
+    <div class="section">
+        <h2>This is AlbumGuesser!</h2>
+    </div>
+
+    <div class="section">
+        <h2>Try to get as many information about a given album right to score points!</h2>
+        <h3>Album name is worth 1 point.</h3>
+        <h3>Artist name is worth 1 point.</h3>
+        <h3>Release year is worth 3 point.</h3>
+        <h3>One minute to score as many points as you can!</h3>
+    </div>
+
+    <h3>Let's Start 🎵</h3>
+    <div class="section horizontal-container">
+        <form action="/AlbumGuesser" method="get">
+            <button class="btn btn-primary" type="submit" name="mode" value="easy">Easy mode</button>
+        </form>
+        <br>
+        <form action="/AlbumGuesser" method="get">
+            <button class="btn btn-primary" type="submit" name="mode" value="hard">Hard mode</button>
+        </form>
+        <br>
+        <form action="/unlimited" method="get">
+            <button class="btn btn-primary" type="submit" name="mode" value="unlimited">Unlimited mode (no timer)</button>
+        </form>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div>
+        <div class="left-content">
+            <a href="https://www.last.fm/" target="blank">Powered by AudioScrobbler</a>
+            <p>Last.fm Ltd. All rights reserved</p>
+        </div>
+            <div class="right-content">
+                <a href="https://github.com/FuraBuxoZeca" target="_blank">
+                    <h6 style="margin-bottom: 10px; margin-top: 5px;">My Github</h6>
+                </a>
+                <a href="https://www.linkedin.com/in/felipe-luiz-wlodkowski-953255273/" target="_blank">
+                    <h6 style="margin-bottom: 10px; margin-top: 5px;">My LinkedIn</h6>
+                </a>
+        </div>
+    </div>
+  </footer>
+
+{% endblock %}
