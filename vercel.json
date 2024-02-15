@@ -8,7 +8,7 @@
     ],
     "builds": [
       {
-        "src": "/api/app.py",
+        "src": "/api/app.py /api/helpers.py",
         "use": "@vercel/python"
       }
     ],
