@@ -1,19 +1,10 @@
 {
     "version": 2,
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/api/app.py"
-      }
+      { "handle": "filesystem" },
+      { "src": "/api/(.*)", "dest": "/api/app.py" }
     ],
     "builds": [
-      {
-        "src": "/api/app.py /api/helpers.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "env": {
-      "FLASK_ENV": "production",
-      "FLASK_APP": "/api/app.py"
-    }
-  }
+      { "src": "/api/app.py /api/helpers.py", "use": "@vercel/python" }
+    ]
+}
